@@ -359,6 +359,8 @@
 
 
 
+
+
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Kanishka1 from "../assets/Kanishka1.png";
@@ -377,11 +379,10 @@ import {
   DiReact,
 } from "react-icons/di";
 import { motion } from "framer-motion";
-import PDFViewer from 'pdf-viewer-reactjs'
-
 
 const Hero = () => {
-
+  const [isOpen, setIsOpen] = useState(false);
+  const resumeUrl = "/My_Resume.pdf";
   return (
     <div className="mt-24 max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 relative">
       {/* 🟣 Hero Section */}
@@ -429,24 +430,55 @@ const Hero = () => {
             transition={{ duration: 1, delay: 1.5 }}
             className="flex flex-col sm:flex-row items-center gap-6 my-4 md:mb-0"
           >
-            {/* Resume Button */}
-            <motion.button
-              whileHover={{
-                scale: 1.05,
-                boxShadow: "0px 0px 8px rgba(0, 0, 0, 0.3)",
-              }}
-              className="z-10 cursor-pointer font-bold text-gray-200 p-4 border border-purple-400 rounded-xl"
-              onClick={() => {
-                const link = document.createElement("a");
-                link.href = "/resume.pdf";
-                link.download = "Kanishka_Resume.pdf";
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
-              }}
-            >
-              Download Resume
-            </motion.button>
+
+
+            <div className="flex flex-col items-center justify-center">
+              {/* Button to open the popup */}
+              <motion.button
+                whileHover={{ scale: 1.05, boxShadow: "0px 0px 8px rgba(0, 0, 0, 0.3)" }}
+                className="z-10 cursor-pointer font-bold text-gray-200 p-4 border border-purple-400 rounded-xl"
+                onClick={() => setIsOpen(true)}
+              >
+                View Resume
+              </motion.button>
+
+              {/* Popup Modal */}
+              {isOpen && (
+                <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0.8 }}
+                    className="bg-gray-900 p-6 rounded-xl shadow-lg w-full max-w-3xl relative"
+                  >
+                    {/* Close Button */}
+                    <button
+                      className="absolute top-3 right-3 text-gray-300 text-xl font-bold"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      ✖
+                    </button>
+
+                    {/* Resume Preview in iframe */}
+                    <iframe
+                      src={resumeUrl}
+                      className="w-full h-[500px] rounded-lg"
+                      title="Resume Preview"
+                    ></iframe>
+
+                    {/* Download Button */}
+                    <a
+                      href={resumeUrl}
+                      download="My_Resume.pdf"
+                      className="mt-4 block text-center font-bold text-purple-400 border border-purple-400 px-4 py-2 rounded-lg hover:bg-purple-500 hover:text-white transition duration-300"
+                    >
+                      Download Resume
+                    </a>
+                  </motion.div>
+                </div>
+              )}
+            </div>
+
 
             <div className="flex gap-6 text-4xl text-purple-400 z-20">
               <motion.a whileHover={{ scale: 1.2 }} href="https://github.com/Kanishka-Trivedi" target="_blank">
@@ -472,57 +504,111 @@ const Hero = () => {
         />
       </div>
 
-      {/* 🔵 Resume Section */}
-      {/* <motion.div
+      {/* 🔵 Tech Stack */}
+      <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 1, delay: 2 }}
-        className="text-gray-300 text-center py-12"
+        className="flex flex-wrap justify-center text-center text-2xl sm:text-3xl text-gray-200 py-12"
       >
+        <p className="w-full text-gray-300 mb-4">My Tech Stack</p>
+        <div className="flex justify-center gap-4">
+          <DiHtml5 className="text-orange-600" />
+          <DiCss3 className="text-blue-600" />
+          <DiJavascript1 className="text-yellow-500" />
+          <DiReact className="text-blue-500" />
+          <DiNodejsSmall className="text-green-500" />
+        </div>
+      </motion.div>
+
+      {/* 🟢 About Me Section */}
+      <motion.div className="text-gray-300 mb-12 text-center">
         <h2 className="text-3xl sm:text-4xl md:text-5xl text-purple-400 font-semibold mb-6">
-          My Resume
-        </h2> */}
-        
-        {/* Resume Preview */}
-        {/* <div className="border border-gray-400 rounded-lg p-2 shadow-lg inline-block">
-          <Document
-            file="My_Resume.pdf"
-            onLoadSuccess={({ numPages }) => setNumPages(numPages)}
-            className="w-full"
-          >
-            {Array.from(new Array(numPages), (el, index) => (
-              <Page key={`page_${index + 1}`} pageNumber={index + 1} width={600} />
-            ))}
-          </Document>
-        </div> */}
+          About Me
+        </h2>
+        <p className="text-lg sm:text-xl md:text-2xl max-w-3xl mx-auto">
+          Hey there! I’m <span className="text-purple-400 font-semibold">Kanishka Trivedi</span>, an aspiring software engineer from <span className="text-purple-400 font-semibold">Palanpur, Gujarat</span>.
+          I’m passionate about building smooth, intuitive digital experiences and love solving complex problems with full-stack development.
+          Whether it’s crafting seamless UIs or optimizing backend performance, I’m always up for a challenge! 🚀
+        </p>
 
-        {/* Download Button */}
-        {/* <motion.button
-          whileHover={{
-            scale: 1.05,
-            boxShadow: "0px 0px 8px rgba(0, 0, 0, 0.3)",
-          }}
-          onClick={() => {
-            const link = document.createElement("a");
-            link.href = "/My_Resume.pdf";
-            link.download = "My_Resume.pdf";
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-          }}
-          className="mt-4 px-6 py-2 bg-purple-500 text-white font-bold rounded-lg border border-purple-600"
+      </motion.div>
+
+      {/* 🟠 Education Section */}
+      <motion.div className="text-gray-300 mb-12 text-center">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl text-purple-400 font-semibold mb-6">
+          Education
+        </h2>
+        <p className="text-lg sm:text-xl md:text-2xl max-w-3xl mx-auto">
+          📖 Currently pursuing a Bachelor's Degree in Computer Science
+          🎯 Focused on Web Development, and Software Engineering.
+        </p>
+      </motion.div>
+
+      {/* 🔴 Finoptix Project */}
+      <motion.div className="text-gray-300 mb-12 text-center">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl text-purple-400 font-semibold mb-6">
+          My Major Project: Finoptix
+        </h2>
+        <p className="text-lg sm:text-xl md:text-2xl max-w-3xl mx-auto">
+          🚀 Finoptix is a financial tracking app that helps users manage
+          expenses, optimize spending, and achieve financial freedom.
+          💡 Features: smart insights, AI-powered analytics, and intuitive UI
+          to make personal finance effortless.
+          🌐 Built using React, MongoDB, and framer motion for dynamic
+          insights.
+        </p>
+      </motion.div>
+
+      <motion.div className="text-gray-300 mb-12 text-center">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl text-purple-400 font-semibold mb-6">
+          Hobbies & Interests
+        </h2>
+        <motion.p
+          className="text-lg sm:text-xl md:text-2xl max-w-3xl mx-auto 
+               text-gray-300 bg-gradient-to-r from-purple-400 to-indigo-400 
+               inline-block bg-clip-text"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1, delay: 0.2 }}
         >
-          Download Resume
-        </motion.button>
-      </motion.div> */}
+          When I’m not coding, you’ll find me exploring new tech,
+          diving into finance & investments, or automating random tasks just for fun.
+          I also enjoy gaming 🎮, sci-fi movies 🎬, Traveling 🌍, Sketching 🎨, and Listening to Music 🎵.
+        </motion.p>
+      </motion.div>
 
 
-<PDFViewer
-            document={{
-                url: 'https://arxiv.org/pdf/quant-ph/0410100.pdf',
-            }}
-        />
+      <motion.div className="text-gray-300 mb-12 text-center">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl text-purple-500 font-semibold mb-6">
+          The Days I Code
+        </h2>
+        <p className="text-lg sm:text-xl md:text-2xl max-w-3xl mx-auto mb-6">
+          My coding activity on GitHub – every purple square is a day I coded! 💻
+        </p>
+        <motion.a
+          href="https://github.com/Kanishka-Trivedi"
+          target="_blank"
+          rel="noopener noreferrer"
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          whileHover={{ scale: 1.05 }}
+        >
+          <img
+            src="https://ghchart.rshah.org/color=a855f7/Kanishka-Trivedi"
+            alt="Kanishka's GitHub contribution graph"
+            className="mx-auto rounded-lg shadow-lg"
+            style={{ width: "100%", maxWidth: "900px", height: "auto" }}
+          />
+        </motion.a>
+        <p className="text-sm text-gray-400 mt-4">
+          Click to visit my GitHub profile | Live contribution graph
+        </p>
+      </motion.div>
 
       {/* ✨ Background Effect */}
       <div className="absolute inset-0 hidden md:block">
