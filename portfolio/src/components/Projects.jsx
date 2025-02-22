@@ -104,22 +104,22 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import project1 from "../assets/Project1.png";
-import project2 from "../assets/Project2.png";
-import project3 from "../assets/Project3.png";
-import project4 from "../assets/Project4.png";
-import project5 from "../assets/Project5.png";
-import project6 from "../assets/Project6.png";
-import project7 from "../assets/Project7.png";
-import project8 from "../assets/Project8.png";
-import project9 from "../assets/Project9.png";
-import project10 from "../assets/Project10.png";
+import Project1 from "../assets/Project1.png";
+import Project2 from "../assets/Project2.png";
+import Project3 from "../assets/Project3.png";
+import Project4 from "../assets/Project4.png";
+import Project5 from "../assets/Project5.png";
+import Project6 from "../assets/Project6.png";
+import Project7 from "../assets/Project7.png";
+import Project8 from "../assets/Project8.png";
+import Project9 from "../assets/Project9.png";
+import Project10 from "../assets/Project10.png";
 import { AiOutlineGithub } from 'react-icons/ai';
 import Reveal from './Reveal';
 
 const projects = [
     {
-      img: project1,
+      img: Project1,
       title: "Project #1",
       description: "UI for frontend development using React.",
       links: {
@@ -128,7 +128,7 @@ const projects = [
       },
     },
     {
-      img: project2,
+      img: Project2,
       title: "Project #2",
       description: "A fullstack application built with Node.js and MongoDB.",
       links: {
@@ -137,7 +137,7 @@ const projects = [
       },
     },
     {
-      img: project3,
+      img: Project3,
       title: "Project #3",
       description: "An e-commerce platform with various features.",
       links: {
@@ -146,7 +146,7 @@ const projects = [
       },
     },
     {
-      img: project4,
+      img: Project4,
       title: "Project #4",
       description: "A mobile-friendly application using React Native.",
       links: {
@@ -155,7 +155,7 @@ const projects = [
       },
     },
     {
-      img: project5,
+      img: Project5,
       title: "Project #5",
       description: "A data visualization project using D3.js and other libraries.",
       links: {
@@ -164,7 +164,7 @@ const projects = [
       },
     },
     {
-      img: project6,
+      img: Project6,
       title: "Project #6",
       description: "A mobile-friendly application using React Native.",
       links: {
@@ -173,7 +173,7 @@ const projects = [
       },
     },
     {
-      img: project7,
+      img: Project7,
       title: "Project #7",
       description: "A data visualization project using D3.js and other libraries.",
       links: {
@@ -182,7 +182,7 @@ const projects = [
       },
     },
     {
-      img: project8,
+      img: Project8,
       title: "Project #8",
       description: "A mobile-friendly application using React Native.",
       links: {
@@ -191,7 +191,7 @@ const projects = [
       },
     },
     {
-      img: project9,
+      img: Project9,
       title: "Project #9",
       description: "A data visualization project using D3.js and other libraries.",
       links: {
@@ -200,7 +200,7 @@ const projects = [
       },
     },
     {
-      img: project10,
+      img: Project10,
       title: "Project #10",
       description: "A mobile-friendly application using React Native.",
       links: {
