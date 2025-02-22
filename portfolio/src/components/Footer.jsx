@@ -62,7 +62,7 @@ const Footer = () => {
 
       {/* Right Section - Copyright */}
       <div className="flex-1 text-gray-400">
-        <p>© 2024 Kanishka Trivedi. All rights reserved.</p>
+        <p>© 2025 Kanishka Trivedi. All rights reserved.</p>
       </div>
 
     </div>
