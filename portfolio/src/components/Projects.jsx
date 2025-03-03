@@ -212,8 +212,24 @@ const projects = [
 
 const Projects = () => {
   return (
-    <div className="max-w-[1000px] mx-auto p-6 md:my-20" id="portfolio">
-      <h2 className="text-3xl font-bold text-gray-200 mb-8">Projects</h2>
+  <div className="max-w-[1000px] mx-auto p-6 md:my-20" id="portfolio">
+
+<h2 className="text-3xl font-bold text-gray-200 mb-8 mt-13">Project Demos</h2>
+
+<div className="flex justify-center">
+  <div className="relative w-full max-w-2xl" style={{ paddingTop: "56.25%" }}>
+    <iframe
+      className="absolute top-0 left-0 w-full h-full"
+      src="https://www.youtube.com/embed/LGklxaiPuXo"
+      title="Embedded Video"
+      frameBorder="0"
+      allowFullScreen
+    ></iframe>
+  </div>
+</div>
+
+
+      <h2 className="text-3xl font-bold text-gray-200 mb-8 mt-15">Projects</h2>
       {projects.map((project, index) => (
         <Reveal key={index}>
           <div className={`flex flex-col md:flex-row ${index % 2 !== 0 ? 'md:flex-row-reverse' : ''} mb-12`}>
