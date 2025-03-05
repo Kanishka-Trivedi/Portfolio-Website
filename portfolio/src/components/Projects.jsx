@@ -120,44 +120,49 @@ import Reveal from './Reveal';
 const projects = [
     {
       img: Project1,
-      title: "Project #1",
-      description: "UI for frontend development using React.",
+      name: "FINOPTIX",
+      title: "Project 1",
+      description: "Finoptix – A financial tracking app built with React, Vite, and MongoDB that helps users optimize savings, track expenses, and detect discrepancies with smart alerts and real-time insights.",
       links: {
-        site: "/projects/project1",
+        site: "https://finoptix.netlify.app",
         github: "https://github.com/Kanishka-Trivedi/finoptix",
       },
     },
     {
       img: Project2,
-      title: "Project #2",
-      description: "A fullstack application built with Node.js and MongoDB.",
+      name: "NASA Clone",
+      title: "Project 2",
+      description: "NASA Clone – A responsive HTML & CSS website replicating NASA’s design with space imagery and mission details. ",
       links: {
-        site: "nasaclone12.netlify.app",
+        site: "https://nasaclone12.netlify.app",
         github: "https://github.com/Kanishka-Trivedi/NASA-Clone",
       },
     },
     {
       img: Project3,
-      title: "Project #3",
-      description: "An e-commerce platform with various features.",
+      name: "Canva Clone",
+      title: "Project 3",
+      description: "A responsive HTML & CSS design mimicking Canva’s UI with a sleek and modern layout.",
       links: {
-        site: "canva-clone12.netlify.app",
+        site: "https://canva-clone12.netlify.app",
         github: "https://github.com/Kanishka-Trivedi/Canva-Clone",
       },
     },
     {
       img: Project4,
-      title: "Project #4",
-      description: "A mobile-friendly application using React Native.",
+      name: "Citadel Clone",
+      title: "Project 4",
+      description: "A responsive HTML & CSS replica of Citadel’s website, featuring a sleek and professional design.",
       links: {
-        site: "citadelclone12.netlify.app",
+        site: "https://citadelclone12.netlify.app",
         github: "https://github.com/Kanishka-Trivedi/Citadel-Clone",
       },
     },
     {
       img: Project5,
-      title: "Project #5",
-      description: "A data visualization project using D3.js and other libraries.",
+      name: "API Route Project",
+      title: "Project 5",
+      description: "A React Router project using MealsDB, CocktailDB, and more to browse meals, drinks, and recipes. ",
       links: {
         site: "/projects/project5",
         github: "https://github.com/Kanishka-Trivedi/Route-Project",
@@ -165,8 +170,9 @@ const projects = [
     },
     {
       img: Project6,
-      title: "Project #6",
-      description: "A mobile-friendly application using React Native.",
+      name: "Swiggy Clone",
+      title: "Project 6",
+      description: "A responsive HTML & CSS replica of Swiggy’s UI, featuring a clean design and food delivery layout.",
       links: {
         site: "/projects/project6",
         github: "https://github.com/Kanishka-Trivedi/Html-Projects/blob/main/swiggy%20clone.html",
@@ -174,8 +180,9 @@ const projects = [
     },
     {
       img: Project7,
-      title: "Project #7",
-      description: "A data visualization project using D3.js and other libraries.",
+      name: "Plant Orbit",
+      title: "Project 7",
+      description: "A responsive HTML & CSS website for buying plants, featuring a clean and green design.",
       links: {
         site: "/projects/project7",
         github: "https://github.com/Kanishka-Trivedi/Html-Projects/blob/main/plant%20website.html",
@@ -183,8 +190,9 @@ const projects = [
     },
     {
       img: Project8,
-      title: "Project #8",
-      description: "A mobile-friendly application using React Native.",
+      name: "Amazon Clone",
+      title: "Project 8",
+      description: "A responsive HTML & CSS replica of Amazon’s UI, featuring a product grid and e-commerce layout.",
       links: {
         site: "/projects/project8",
         github: "https://github.com/Kanishka-Trivedi/Html-Projects/blob/main/amazon%20clone.html",
@@ -192,8 +200,9 @@ const projects = [
     },
     {
       img: Project9,
-      title: "Project #9",
-      description: "A data visualization project using D3.js and other libraries.",
+      name: "Spotify Clone",
+      title: "Project 9",
+      description: "A React project replicating Spotify’s UI with dynamic music browsing, playlists, and a sleek audio player.",
       links: {
         site: "/projects/project9",
         github: "https://github.com/Kanishka-Trivedi/Html-Projects/tree/main/Spotify%20Clone/vite_app",
@@ -201,8 +210,9 @@ const projects = [
     },
     {
       img: Project10,
-      title: "Project #10",
-      description: "A mobile-friendly application using React Native.",
+      name: "Curency Calculator",
+      title: "Project 10",
+      description: "A React app using an API to provide real-time currency conversion with a simple and intuitive UI.",
       links: {
         site: "/projects/project10",
         github: "https://github.com/Kanishka-Trivedi/React-Projects/tree/main/currencyCalculator",
@@ -242,6 +252,7 @@ const Projects = () => {
             </div>
             <div className="w-full md:w-1/2 p-4 flex flex-col justify-center">
               <h3 className="text-2xl font-semibold text-gray-200 mb-4">{project.title}</h3>
+              <h4 className="text-xl font-semibold text-gray-200 mb-4">{project.name}</h4>
               <p className="text-gray-300 mb-4">{project.description}</p>
               <div className="flex space-x-4">
                 <Link
