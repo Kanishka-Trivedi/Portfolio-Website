@@ -140,9 +140,9 @@ const Navbar = () => {
                 </ul>
 
                 {/* Mobile Menu Toggle */}
-<div onClick={toggleNav} className="md:hidden z-50 text-gray-200">
-  {!nav && <AiOutlineMenu size={30} />}
-</div>
+                <div onClick={toggleNav} className="md:hidden z-50 text-gray-200">
+                    {!nav && <AiOutlineMenu size={30} />}
+                </div>
 
                 {/* Mobile Menu */}
                 <QuadrantDrawer isOpen={nav} onClose={closeNav} />
