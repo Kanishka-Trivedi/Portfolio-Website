@@ -334,14 +334,14 @@ const skills = [
     description:
       "Making the web beautiful, one pixel at a time 🎨. Frontend development is all about crafting intuitive, responsive, and engaging user interfaces. Also, 90% of the job is making divs look good!",
     technologies: [
-      { name: "HTML", icon: <DiHtml5 className="text-[#E44D26] text-6xl" /> },
-      { name: "CSS", icon: <DiCss3 className="text-[#264DE4] text-6xl" /> },
-      { name: "Tailwind", icon: <SiTailwindcss className="text-[#06B6D4] text-6xl" /> },
-      { name: "MUI", icon: <SiMui className="text-[#007FFF] text-6xl" /> },
-      { name: "JavaScript", icon: <DiJavascript1 className="text-[#F7DF1E] text-6xl" /> },
-      { name: "TypeScript", icon: <SiTypescript className="text-[#3178C6] text-6xl" /> },
-      { name: "React.js", icon: <DiReact className="text-[#61DAFB] text-6xl" /> },
-      { name: "Chakra", icon: <SiChakraui className="text-[#319795] text-6xl" /> },
+      { name: "HTML", icon: <DiHtml5 className=" animate-bounce text-[#E44D26] text-6xl" /> },
+      { name: "CSS", icon: <DiCss3 className="animate-bounce text-[#264DE4] text-6xl" /> },
+      { name: "Tailwind", icon: <SiTailwindcss className="animate-bounce text-[#06B6D4] text-6xl" /> },
+      { name: "MUI", icon: <SiMui className="animate-bounce text-[#007FFF] text-6xl" /> },
+      { name: "JavaScript", icon: <DiJavascript1 className="animate-bounce text-[#F7DF1E] text-6xl" /> },
+      { name: "TypeScript", icon: <SiTypescript className="animate-bounce text-[#3178C6] text-6xl" /> },
+      { name: "React.js", icon: <DiReact className="animate-bounce text-[#61DAFB] text-6xl" /> },
+      { name: "Chakra", icon: <SiChakraui className="animate-bounce text-[#319795] text-6xl" /> },
     ],
   },
   {
@@ -349,11 +349,11 @@ const skills = [
     description:
       "Ensuring the magic happens behind the scenes 🧙‍♂️. Backend development is where the real logic happens, turning chaotic user requests into structured responses. If something goes wrong, blame the frontend!",
     technologies: [
-      { name: "Node.js", icon: <DiNodejsSmall className="text-[#68A063] text-6xl" /> },
-      { name: "Express.js", icon: <SiExpress className="text-[#000000] text-6xl" /> },
-      { name: "MongoDB", icon: <DiMongodb className="text-[#47A248] text-6xl" /> },
-      { name: "PostgreSQL", icon: <SiPostgresql className="text-[#336791] text-6xl" /> },
-      { name: "Firebase", icon: <SiFirebase className="text-[#FFCA28] text-6xl" /> },
+      { name: "Node.js", icon: <DiNodejsSmall className="animate-bounce text-[#68A063] text-6xl" /> },
+      { name: "Express.js", icon: <SiExpress className="animate-bounce text-[#000000] text-6xl" /> },
+      { name: "MongoDB", icon: <DiMongodb className="animate-bounce text-[#47A248] text-6xl" /> },
+      { name: "PostgreSQL", icon: <SiPostgresql className="animate-bounce text-[#336791] text-6xl" /> },
+      { name: "Firebase", icon: <SiFirebase className="animate-bounce text-[#FFCA28] text-6xl" /> },
     ],
   },
   {
@@ -361,12 +361,12 @@ const skills = [
     description:
       "Keeping things running smoothly, even when they don't want to 🚀. DevOps is where debugging feels like detective work—except you're both the detective and the suspect!",
     technologies: [
-      { name: "Postman", icon: <SiPostman className="text-[#FF6C37] text-6xl" /> },
-      { name: "Git", icon: <SiGit className="text-[#F34F29] text-6xl" /> },
-      { name: "GitHub", icon: <DiGithubBadge className="text-[#181717] text-6xl" /> },
-      { name: "Figma", icon: <SiFigma className="text-[#F24E1E] text-6xl" /> },
-      { name: "Render", icon: <SiRender className="text-[#46E3B7] text-6xl" /> },
-      { name: "Canva", icon: <SiCanva className="text-[#46E3B7] text-6xl" /> },
+      { name: "Postman", icon: <SiPostman className="animate-bounce text-[#FF6C37] text-6xl" /> },
+      { name: "Git", icon: <SiGit className="animate-bounce text-[#F34F29] text-6xl" /> },
+      { name: "GitHub", icon: <DiGithubBadge className="animate-bounce text-[#181717] text-6xl" /> },
+      { name: "Figma", icon: <SiFigma className="animate-bounce text-[#F24E1E] text-6xl" /> },
+      { name: "Render", icon: <SiRender className="animate-bounce text-[#46E3B7] text-6xl" /> },
+      { name: "Canva", icon: <SiCanva className="animate-bounce text-[#46E3B7] text-6xl" /> },
     ],
   },
 ];
@@ -401,7 +401,7 @@ const Skills = () => {
                   key={idx} 
                   className="flex flex-col items-center justify-center bg-gray-800 p-6 w-32 h-32 rounded-lg shadow-md transition-transform transform hover:scale-110 hover:bg-gray-700"
                 >
-                  <span className="text-5xl mb-3">{tech.icon}</span>
+                  <span className="text-5xl mb-1">{tech.icon}</span>
                   <span className="text-lg font-medium text-white">{tech.name}</span>
                 </div>
               ))}
