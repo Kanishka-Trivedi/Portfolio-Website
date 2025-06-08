@@ -89,6 +89,7 @@ import React, { useState } from 'react';
 import Logo from '../assets/Logo1.png';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import QuadrantDrawer from './QuadrantDrawer';
 
@@ -133,11 +134,48 @@ const Navbar = () => {
 
                 {/* Desktop Menu */}
                 <ul className="hidden md:flex gap-12 cursor-pointer">
-                    <li><Link to="/" className="hover:text-purple-400">Home</Link></li>
-                    <li><Link to="/skills" className="hover:text-purple-400">Skills</Link></li>
-                    <li><Link to="/projects" className="hover:text-purple-400">Projects</Link></li>
-                    <li><Link to="/contact" className="hover:text-purple-400">Contact</Link></li>
+                    <li>
+                        <NavLink
+                            to="/"
+                            className={({ isActive }) =>
+                                isActive ? "text-indigo-300 font-semibold" : "hover:text-purple-400"
+                            }
+                        >
+                            Home
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink
+                            to="/skills"
+                            className={({ isActive }) =>
+                                isActive ? "text-indigo-300 font-semibold" : "hover:text-purple-400"
+                            }
+                        >
+                            Skills
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink
+                            to="/projects"
+                            className={({ isActive }) =>
+                                isActive ? "text-indigo-300 font-semibold" : "hover:text-purple-400"
+                            }
+                        >
+                            Projects
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink
+                            to="/contact"
+                            className={({ isActive }) =>
+                                isActive ? "text-indigo-300 font-semibold" : "hover:text-purple-400"
+                            }
+                        >
+                            Contact
+                        </NavLink>
+                    </li>
                 </ul>
+
 
                 {/* Mobile Menu Toggle */}
                 <div onClick={toggleNav} className="md:hidden z-50 text-gray-200">

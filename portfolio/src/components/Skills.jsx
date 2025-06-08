@@ -373,7 +373,7 @@ const skills = [
 
 const Skills = () => {
   return (
-    <div className="max-w-5xl mx-auto flex flex-col justify-center px-6 text-gray-300 pb-16 md:py-20 mt-10">
+    <div className="max-w-5xl mx-auto flex flex-col justify-center px-6 text-gray-300 pb-16 md:py-20 mt-20">
       <Reveal>
         <h2 className="text-4xl font-bold mb-6 text-center text-white">Skills</h2>
         <p className="text-center mb-8 text-lg text-gray-400">

@@ -88,6 +88,13 @@ const QuadrantDrawer = ({ isOpen, onClose }) => {
     { name: 'Contact', path: '/contact' },
   ];
 
+  const sectionColors = [
+  '#4B0082', // Indigo
+  '#5E2B97', // Deep Violet
+  '#6A0DAD', // Amethyst Purple
+  '#7B1FA2', // Royal Purple
+];
+
   return (
     <AnimatePresence>
       {isOpen && (
@@ -123,7 +130,7 @@ const QuadrantDrawer = ({ isOpen, onClose }) => {
                 transition={{ delay: 0.1 * index }}
                 className="absolute text-white font-semibold text-sm flex items-center justify-end pr-4 cursor-pointer hover:bg-purple-700"
                 style={{
-                  backgroundColor: `hsl(${260 + index * 15}, 100%, 50%)`,
+                backgroundColor: sectionColors[index],
                   width: `${100 + index * 30}px`,
                   height: `40px`,
                   top: `${index * 60 + 40}px`, // pushed down to avoid cross

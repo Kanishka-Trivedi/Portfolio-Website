@@ -95,7 +95,7 @@ const Contact = () => {
   return (
     <div className="px-6 max-w-4xl mx-auto md:my-12" id="contact">
       <Reveal>
-        <div className="grid md:grid-cols-2 gap-10 place-items-center mt-15">
+        <div className="grid md:grid-cols-2 gap-10 place-items-center mt-25">
           {/* 🟣 Left Section: About Me */}
           <div className="text-gray-300 text-center md:text-left">
             <h3 className="text-4xl font-semibold mb-5 text-white">
