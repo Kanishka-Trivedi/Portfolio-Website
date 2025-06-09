@@ -395,7 +395,7 @@ const Hero = () => {
           className="text-center md:text-left"
         >
           <TypeAnimation
-            sequence={["Fullstack Developer", 1000, "Web Designer", 1000]}
+            sequence={["Fullstack Developer", 1000, "Web Designer", 1000, "CS Undergrad", 1000]}
             speed={50}
             repeat={Infinity}
             className="font-bold text-gray-400 text-xl sm:text-2xl md:text-4xl italic mb-4"
