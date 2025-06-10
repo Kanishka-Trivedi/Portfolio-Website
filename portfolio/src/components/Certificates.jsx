@@ -114,7 +114,7 @@ const certificates = [
     description: "Foundational course introducing core Azure services, cloud computing basics, and essential tools for managing and deploying resources on Microsoft Azure.",
     color: "#8B5CF6",
   },
-    {
+  {
     id: 7,
     title: "Deep Dive into Container Security Certificate",
     issuer: "Simplilearn & Skillup",
@@ -127,7 +127,7 @@ const certificates = [
     description: "A focused certification exploring security best practices, tools, and techniques for protecting Docker and Kubernetes containerized environments.",
     color: "#8B5CF6",
   },
-    {
+  {
     id: 8,
     title: "Gateway Load Balancer Certificate",
     issuer: "Simplilearn & Skillup",
@@ -140,7 +140,7 @@ const certificates = [
     description: "Introduction to AWS Gateway Load Balancer focusing on cloud traffic management, network security, and scalable infrastructure deployment.",
     color: "#8B5CF6",
   },
-      {
+  {
     id: 9,
     title: "GitHub Copilot Certificate",
     issuer: "Simplilearn & Skillup",
@@ -153,7 +153,7 @@ const certificates = [
     description: "A concise introduction to GitHub Copilot, exploring AI-powered code suggestions, developer productivity, and modern coding automation.",
     color: "#8B5CF6",
   },
-      {
+  {
     id: 10,
     title: "RestAPI Intermediate Certificate",
     issuer: "HackerRank",
@@ -167,7 +167,7 @@ const certificates = [
     credentialId: "06321767FA90",
     color: "#8B5CF6",
   },
-      {
+  {
     id: 11,
     title: "FrontEnd Devloper Certificate",
     issuer: "HackerRank",
@@ -181,7 +181,7 @@ const certificates = [
     credentialId: "C2242B94323C",
     color: "#8B5CF6",
   },
-      {
+  {
     id: 12,
     title: "Css Certificate",
     issuer: "HackerRank",
@@ -195,7 +195,7 @@ const certificates = [
     credentialId: "A987A929CBA1",
     color: "#8B5CF6",
   },
-      {
+  {
     id: 13,
     title: "JavaScript Basics Certificate",
     issuer: "HackerRank",
@@ -209,7 +209,7 @@ const certificates = [
     credentialId: "700E50151382",
     color: "#8B5CF6",
   },
-        {
+  {
     id: 14,
     title: "JavaScript Intermediate Certificate",
     issuer: "HackerRank",
@@ -223,7 +223,7 @@ const certificates = [
     credentialId: "895974834BDF",
     color: "#8B5CF6",
   },
-        {
+  {
     id: 15,
     title: "React Certificate",
     issuer: "HackerRank",
@@ -237,7 +237,7 @@ const certificates = [
     credentialId: "895974834BDF",
     color: "#8B5CF6",
   },
-        {
+  {
     id: 16,
     title: "Problem Solving Certificate",
     issuer: "HackerRank",
@@ -588,148 +588,163 @@ export default function Certificates() {
           </div>
 
           {/* Certificates Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 sm:gap-6 md:gap-8 lg:gap-10">
-            {filteredCertificates.map((cert, index) => (
-              <Card
-                key={cert.id}
-                className={`group relative bg-white/5 backdrop-blur-sm border-white/10 hover:border-purple-500/30 transition-all duration-700 cursor-pointer overflow-hidden ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-                  }`}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-y-10 gap-x-2 sm:gap-x-4 md:gap-x-6 lg:gap-x-[0px]">            {filteredCertificates.map((cert, index) => (
+            <Card
+              key={cert.id}
+              className={`max-w-[550px] w-full mx-auto group relative bg-white/5 backdrop-blur-sm border-white/10 hover:border-purple-500/30 transition-all duration-700 cursor-pointer overflow-hidden ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+                }`}
+              style={{
+                transitionDelay: `${index * 150}ms`,
+                transformStyle: "preserve-3d",
+              }}
+              onMouseEnter={() => setHoveredCard(cert.id)}
+              onMouseLeave={() => setHoveredCard(null)}
+            >
+              {/* Glow Effect */}
+              <div
+                className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-lg blur-xl"
                 style={{
-                  transitionDelay: `${index * 150}ms`,
-                  transformStyle: "preserve-3d",
+                  background: `linear-gradient(45deg, ${cert.color}20, ${cert.color}40)`,
+                  transform: "translateZ(-10px)",
                 }}
-                onMouseEnter={() => setHoveredCard(cert.id)}
-                onMouseLeave={() => setHoveredCard(null)}
-              >
-                {/* Glow Effect */}
-                <div
-                  className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-lg blur-xl"
-                  style={{
-                    background: `linear-gradient(45deg, ${cert.color}20, ${cert.color}40)`,
-                    transform: "translateZ(-10px)",
-                  }}
-                ></div>
+              ></div>
 
-                {/* Hover Shadow */}
-                <div className="absolute inset-0 bg-gradient-to-br from-purple-500/0 via-transparent to-violet-500/0 group-hover:from-purple-500/10 group-hover:to-violet-500/10 transition-all duration-500 rounded-lg"></div>
+              {/* Hover Shadow */}
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/0 via-transparent to-violet-500/0 group-hover:from-purple-500/10 group-hover:to-violet-500/10 transition-all duration-500 rounded-lg"></div>
 
-                <div className="p-0 relative">
-                  {/* Certificate Image */}
-                  <div className="relative overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-violet-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"></div>
-                    <img
-                      src={cert.image || "/placeholder.svg"}
-                      alt={cert.title}
-                      className="w-full h-36 sm:h-40 md:h-44 lg:h-52 object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-110"
-                      style={{
-                        filter: hoveredCard === cert.id ? "saturate(1.2) contrast(1.1)" : "saturate(1) contrast(1)",
-                      }}
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+              <div className="p-0 relative">
+                {/* Certificate Image */}
+                <div className="relative overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-violet-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"></div>
+                  <img
+                    src={cert.image || "/placeholder.svg"}
+                    alt={cert.title}
+                    className="w-full h-48 sm:h-52 md:h-56 lg:h-60 object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-110"
+                    style={{
+                      filter: hoveredCard === cert.id ? "saturate(1.2) contrast(1.1)" : "saturate(1) contrast(1)",
+                    }}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
 
-                    {/* Verification Badge */}
-                    {cert.verified && (
-                      <div className="absolute top-2 sm:top-3 md:top-4 right-2 sm:right-3 md:right-4 bg-green-500/20 backdrop-blur-sm border border-green-500/30 rounded-full p-1.5 sm:p-2 md:p-3 group-hover:scale-110 transition-transform duration-300">
-                        <CheckCircle className="w-3 sm:w-4 md:w-5 h-3 sm:h-4 md:h-5 text-green-400" />
-                        <div className="absolute inset-0 bg-green-400/20 rounded-full animate-ping"></div>
-                      </div>
-                    )}
-
-                    {/* Animated Elements */}
-                    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-all duration-500">
-                      <div className="w-12 sm:w-14 md:w-16 h-12 sm:h-14 md:h-16 border-2 border-white/30 rounded-full animate-spin-slow"></div>
-                      <div className="absolute inset-1 sm:inset-2 border border-purple-400/50 rounded-full animate-pulse"></div>
+                  {/* Verification Badge */}
+                  {cert.verified && (
+                    <div className="absolute top-2 sm:top-3 md:top-4 right-2 sm:right-3 md:right-4 bg-green-500/20 backdrop-blur-sm border border-green-500/30 rounded-full p-1.5 sm:p-2 md:p-3 group-hover:scale-110 transition-transform duration-300">
+                      <CheckCircle className="w-3 sm:w-4 md:w-5 h-3 sm:h-4 md:h-5 text-green-400" />
+                      <div className="absolute inset-0 bg-green-400/20 rounded-full animate-ping"></div>
                     </div>
-                  </div>
+                  )}
 
-                  {/* Certificate Content */}
-                  <div className="p-4 sm:p-6 md:p-8 relative">
-                    {/* Animated Particles */}
-                    <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-                      {[...Array(5)].map((_, i) => (
-                        <div
-                          key={i}
-                          className="absolute w-1 h-1 bg-purple-400/30 rounded-full animate-float opacity-0 group-hover:opacity-100"
-                          style={{
-                            left: `${20 + i * 15}%`,
-                            animationDelay: `${i * 0.2}s`,
-                            animationDuration: "3s",
-                          }}
-                        ></div>
-                      ))}
-                    </div>
-
-                    <div className="flex items-start justify-between mb-3 sm:mb-4">
-                      <h3 className="text-base sm:text-lg md:text-xl font-bold text-white group-hover:text-purple-300 transition-colors line-clamp-2 leading-tight">
-                        {cert.title}
-                      </h3>
-                    </div>
-
-                    <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
-                      <div className="p-1.5 sm:p-2 bg-white/5 rounded-lg">
-                        <Building className="w-3 sm:w-4 h-3 sm:h-4 text-purple-400" />
-                      </div>
-                      <span className="text-gray-300 font-medium sm:font-semibold text-sm sm:text-base">
-                        {cert.issuer}
-                      </span>
-                    </div>
-
-                    <div className="flex items-center gap-2 sm:gap-3 mb-4 sm:mb-6">
-                      <div className="p-1.5 sm:p-2 bg-white/5 rounded-lg">
-                        <Calendar className="w-3 sm:w-4 h-3 sm:h-4 text-violet-400" />
-                      </div>
-                      <span className="text-gray-400 text-sm sm:text-base">{cert.date}</span>
-                    </div>
-
-                    {/* Category Badge */}
-                    <Badge
-                      className={`${getCategoryColor(cert.category)} mb-4 sm:mb-6 px-2 sm:px-3 py-0.5 sm:py-1 group-hover:scale-105 transition-transform duration-300 text-xs sm:text-sm`}
-                    >
-                      {cert.category}
-                    </Badge>
-
-                    {/* Skills */}
-                    <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-6 sm:mb-8">
-                      {cert.skills.slice(0, 3).map((skill, skillIndex) => (
-                        <span
-                          key={skillIndex}
-                          className="text-xs bg-gradient-to-r from-white/10 to-white/5 text-gray-300 px-2 sm:px-3 py-1 sm:py-2 rounded-full border border-white/10 hover:border-purple-500/30 transition-colors duration-300"
-                        >
-                          {skill}
-                        </span>
-                      ))}
-                      {cert.skills.length > 3 && (
-                        <span className="text-xs bg-gradient-to-r from-purple-500/20 to-violet-500/20 text-purple-300 px-2 sm:px-3 py-1 sm:py-2 rounded-full border border-purple-500/30">
-                          +{cert.skills.length - 3} more
-                        </span>
-                      )}
-                    </div>
-
-                    {/* Action Buttons */}
-                    <div className="flex flex-col sm:flex-row gap-2 sm:gap-3">
-                      <Button
-                        variant="outline"
-                        size="lg"
-                        className="flex-1 h-10 sm:h-12 hover:scale-105 transition-all duration-300 text-sm sm:text-base font-medium sm:font-semibold"
-                        onClick={() => openModal(cert)}
-                      >
-                        <Eye className="w-4 sm:w-5 h-4 sm:h-5 mr-2" />
-                        Preview
-                      </Button>
-
-                      <Button
-                        size="lg"
-                        className="flex-1 h-10 sm:h-12 hover:scale-105 transition-all duration-300 text-sm sm:text-base font-medium sm:font-semibold"
-                        onClick={() => window.open(cert.certificateUrl, "_blank")}
-                      >
-                        <ExternalLink className="w-4 sm:w-5 h-4 sm:h-5 mr-2" />
-                        View Certificate
-                      </Button>
-                    </div>
+                  {/* Animated Elements */}
+                  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-all duration-500">
+                    <div className="w-12 sm:w-14 md:w-16 h-12 sm:h-14 md:h-16 border-2 border-white/30 rounded-full animate-spin-slow"></div>
+                    <div className="absolute inset-1 sm:inset-2 border border-purple-400/50 rounded-full animate-pulse"></div>
                   </div>
                 </div>
-              </Card>
-            ))}
+
+                {/* Certificate Content */}
+                <div className="p-4 sm:p-6 md:p-8 relative">
+                  {/* Animated Particles */}
+                  <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+                    {[...Array(5)].map((_, i) => (
+                      <div
+                        key={i}
+                        className="absolute w-1 h-1 bg-purple-400/30 rounded-full animate-float opacity-0 group-hover:opacity-100"
+                        style={{
+                          left: `${20 + i * 15}%`,
+                          animationDelay: `${i * 0.2}s`,
+                          animationDuration: "3s",
+                        }}
+                      ></div>
+                    ))}
+                  </div>
+
+                  <div className="flex items-start justify-between mb-3 sm:mb-4">
+                    <h3 className="text-base sm:text-lg md:text-xl font-bold text-white group-hover:text-purple-300 transition-colors line-clamp-2 leading-tight">
+                      {cert.title}
+                    </h3>
+                  </div>
+
+                  <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
+                    <div className="p-1.5 sm:p-2 bg-white/5 rounded-lg">
+                      <Building className="w-3 sm:w-4 h-3 sm:h-4 text-purple-400" />
+                    </div>
+                    <span className="text-gray-300 font-medium sm:font-semibold text-sm sm:text-base">
+                      {cert.issuer}
+                    </span>
+                  </div>
+
+                  <div className="flex items-center gap-2 sm:gap-3 mb-4 sm:mb-6">
+                    <div className="p-1.5 sm:p-2 bg-white/5 rounded-lg">
+                      <Calendar className="w-3 sm:w-4 h-3 sm:h-4 text-violet-400" />
+                    </div>
+                    <span className="text-gray-400 text-sm sm:text-base">{cert.date}</span>
+                  </div>
+
+                  {/* Category Badge */}
+                  <Badge
+                    className={`${getCategoryColor(cert.category)} mb-4 sm:mb-6 px-2 sm:px-3 py-0.5 sm:py-1 group-hover:scale-105 transition-transform duration-300 text-xs sm:text-sm`}
+                  >
+                    {cert.category}
+                  </Badge>
+
+                  {/* Skills */}
+                  {/* <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-6 sm:mb-8">
+                    {cert.skills.slice(0, 3).map((skill, skillIndex) => (
+                      <span
+                        key={skillIndex}
+                        className="text-xs bg-gradient-to-r from-white/10 to-white/5 text-gray-300 px-2 sm:px-3 py-1 sm:py-2 rounded-full border border-white/10 hover:border-purple-500/30 transition-colors duration-300"
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                    {cert.skills.length > 3 && (
+                      <span className="text-xs bg-gradient-to-r from-purple-500/20 to-violet-500/20 text-purple-300 px-2 sm:px-3 py-1 sm:py-2 rounded-full border border-purple-500/30">
+                        +{cert.skills.length - 3} more
+                      </span>
+                    )}
+                  </div> */}
+
+                  <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-6 sm:mb-8">
+  {cert.skills.slice(0, 3).map((skill, skillIndex) => (
+    <span
+      key={skillIndex}
+      className="text-xs font-medium bg-slate-800 text-white px-2 sm:px-3 py-1 sm:py-2 rounded-full border border-slate-700 hover:bg-blue-700 hover:border-blue-600 hover:shadow-lg hover:shadow-blue-500/30 transition-all duration-300"
+    >
+      {skill}
+    </span>
+  ))}
+  {cert.skills.length > 3 && (
+    <span className="text-xs font-medium bg-slate-700 text-white px-2 sm:px-3 py-1 sm:py-2 rounded-full border border-slate-600 hover:bg-slate-800 hover:shadow-lg hover:shadow-slate-500/30 transition-all duration-300">
+      +{cert.skills.length - 3} more
+    </span>
+  )}
+</div>
+
+                  {/* Action Buttons */}
+                  <div className="flex flex-col sm:flex-row gap-2 sm:gap-3">
+                    <Button
+                      variant="outline"
+                      size="lg"
+                      className="flex-1 h-10 sm:h-12 hover:scale-105 transition-all duration-300 text-sm sm:text-base font-medium sm:font-semibold"
+                      onClick={() => openModal(cert)}
+                    >
+                      <Eye className="w-4 sm:w-5 h-4 sm:h-5 mr-2" />
+                      Preview
+                    </Button>
+
+                    <Button
+                      size="lg"
+                      className="flex-1 h-10 sm:h-12 hover:scale-105 transition-all duration-300 text-sm sm:text-base font-medium sm:font-semibold"
+                      onClick={() => window.open(cert.certificateUrl, "_blank")}
+                    >
+                      <ExternalLink className="w-4 sm:w-5 h-4 sm:h-5 mr-2" />
+                      View Certificate
+                    </Button>
+                  </div>
+                </div>
+              </div>
+            </Card>
+          ))}
           </div>
 
           {/* No Results */}
