@@ -85,6 +85,7 @@ const QuadrantDrawer = ({ isOpen, onClose }) => {
     { name: 'Home', path: '/' },
     { name: 'Skills', path: '/skills' },
     { name: 'Projects', path: '/projects' },
+    { name: 'Certificates', path: '/certificates' },
     { name: 'Contact', path: '/contact' },
   ];
 
@@ -92,6 +93,7 @@ const QuadrantDrawer = ({ isOpen, onClose }) => {
   '#4B0082', // Indigo
   '#5E2B97', // Deep Violet
   '#6A0DAD', // Amethyst Purple
+  '#7B1FA2', // Royal Purple
   '#7B1FA2', // Royal Purple
 ];
 

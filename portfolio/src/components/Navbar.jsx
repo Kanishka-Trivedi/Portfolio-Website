@@ -166,6 +166,16 @@ const Navbar = () => {
                     </li>
                     <li>
                         <NavLink
+                            to="/certificates"
+                            className={({ isActive }) =>
+                                isActive ? "text-indigo-300 font-semibold" : "hover:text-purple-400"
+                            }
+                        >
+                            Certificates
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink
                             to="/contact"
                             className={({ isActive }) =>
                                 isActive ? "text-indigo-300 font-semibold" : "hover:text-purple-400"
@@ -190,4 +200,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
