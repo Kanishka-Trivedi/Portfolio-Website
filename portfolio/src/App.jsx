@@ -32,6 +32,7 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Certificates from "./components/Certificates";
 
+
 export default function App() {
   return (
     <>

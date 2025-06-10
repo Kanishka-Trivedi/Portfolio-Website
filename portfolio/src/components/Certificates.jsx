@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useRef, useEffect } from "react"
+import '../Styles/Certificates.css';
 import {
   ExternalLink,
   Search,
@@ -297,6 +298,19 @@ function Card({ children, className, ...props }) {
   )
 }
 
+// function Card({ children, className, ...props }) {
+//   console.log('Card props:', props); // Debug
+//   const { jsx, ...safeProps } = props; // Remove jsx prop
+//   return (
+//     <div
+//       className={`bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg shadow-lg ${className}`}
+//       {...safeProps}
+//     >
+//       {children}
+//     </div>
+//   );
+// }
+
 // Custom Button Component
 function Button({ children, variant = "default", size = "default", className, ...props }) {
   const baseClasses =
@@ -361,7 +375,7 @@ export default function Certificates() {
   const [selectedCategory, setSelectedCategory] = useState("All")
   const [filteredCertificates, setFilteredCertificates] = useState(certificates)
   const [selectedCertificate, setSelectedCertificate] = useState(null)
-  const [isVisible, setIsVisible] = useState(false)
+  const [isVisible, setIsVisible] = useState(true)
   const [hoveredCard, setHoveredCard] = useState(null)
   const [isModalOpen, setIsModalOpen] = useState(false)
   const sectionRef = useRef(null)
@@ -688,7 +702,7 @@ export default function Certificates() {
                   </Badge>
 
                   {/* Skills */}
-                  {/* <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-6 sm:mb-8">
+                  <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-6 sm:mb-8">
                     {cert.skills.slice(0, 3).map((skill, skillIndex) => (
                       <span
                         key={skillIndex}
@@ -702,23 +716,23 @@ export default function Certificates() {
                         +{cert.skills.length - 3} more
                       </span>
                     )}
-                  </div> */}
+                  </div>
 
-                  <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-6 sm:mb-8">
-  {cert.skills.slice(0, 3).map((skill, skillIndex) => (
-    <span
-      key={skillIndex}
-      className="text-xs font-medium bg-slate-800 text-white px-2 sm:px-3 py-1 sm:py-2 rounded-full border border-slate-700 hover:bg-blue-700 hover:border-blue-600 hover:shadow-lg hover:shadow-blue-500/30 transition-all duration-300"
-    >
-      {skill}
-    </span>
-  ))}
-  {cert.skills.length > 3 && (
-    <span className="text-xs font-medium bg-slate-700 text-white px-2 sm:px-3 py-1 sm:py-2 rounded-full border border-slate-600 hover:bg-slate-800 hover:shadow-lg hover:shadow-slate-500/30 transition-all duration-300">
-      +{cert.skills.length - 3} more
-    </span>
-  )}
-</div>
+                  {/* <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-6 sm:mb-8">
+                    {cert.skills.slice(0, 3).map((skill, skillIndex) => (
+                      <span
+                        key={skillIndex}
+                        className="text-xs font-medium bg-slate-800 text-white px-2 sm:px-3 py-1 sm:py-2 rounded-full border border-slate-700 hover:bg-blue-700 hover:border-blue-600 hover:shadow-lg hover:shadow-blue-500/30 transition-all duration-300"
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                    {cert.skills.length > 3 && (
+                      <span className="text-xs font-medium bg-slate-700 text-white px-2 sm:px-3 py-1 sm:py-2 rounded-full border border-slate-600 hover:bg-slate-800 hover:shadow-lg hover:shadow-slate-500/30 transition-all duration-300">
+                        +{cert.skills.length - 3} more
+                      </span>
+                    )}
+                  </div> */}
 
                   {/* Action Buttons */}
                   <div className="flex flex-col sm:flex-row gap-2 sm:gap-3">
@@ -886,7 +900,7 @@ export default function Certificates() {
         )}
       </Modal>
 
-      <style jsx>{`
+      {/* <style jsx>{`
         @keyframes blob {
           0% {
             transform: translate(0px, 0px) scale(1);
@@ -936,7 +950,7 @@ export default function Certificates() {
           -webkit-box-orient: vertical;
           overflow: hidden;
         }
-      `}</style>
+      `}</style> */}
     </div>
   )
 }
