@@ -114,6 +114,7 @@ import Project7 from "../assets/Project7.png";
 import Project8 from "../assets/Project8.png";
 import Project9 from "../assets/Project9.png";
 import Project10 from "../assets/Project10.png";
+import Project11 from "../assets/Project11.png";
 import { AiOutlineGithub } from 'react-icons/ai';
 import Reveal from './Reveal';
 
@@ -197,24 +198,34 @@ const projects = [
         site: "/projects/project8",
         github: "https://github.com/Kanishka-Trivedi/Html-Projects/blob/main/amazon%20clone.html",
       },
-    },
-    {
+    }, 
+       {
       img: Project9,
-      name: "Spotify Clone",
+      name: "2048 Game",
       title: "Project 9",
-      description: "A React project replicating Spotify’s UI with dynamic music browsing, playlists, and a sleek audio player.",
+      description: "A modern, responsive 2048 game clone built with React, Tailwind CSS, and Framer Motion, featuring smooth animations, sleek UI, and local score saving.",
       links: {
-        site: "/projects/project9",
-        github: "https://github.com/Kanishka-Trivedi/Html-Projects/tree/main/Spotify%20Clone/vite_app",
+        site: "kgame2048.netlify.app",
+        github: "https://github.com/Kanishka-Trivedi/2048-Game",
       },
     },
     {
       img: Project10,
-      name: "Curency Calculator",
+      name: "Spotify Clone",
       title: "Project 10",
-      description: "A React app using an API to provide real-time currency conversion with a simple and intuitive UI.",
+      description: "A React project replicating Spotify’s UI with dynamic music browsing, playlists, and a sleek audio player.",
       links: {
         site: "/projects/project10",
+        github: "https://github.com/Kanishka-Trivedi/Html-Projects/tree/main/Spotify%20Clone/vite_app",
+      },
+    },
+    {
+      img: Project11,
+      name: "Curency Calculator",
+      title: "Project 11",
+      description: "A React app using an API to provide real-time currency conversion with a simple and intuitive UI.",
+      links: {
+        site: "/projects/project11",
         github: "https://github.com/Kanishka-Trivedi/React-Projects/tree/main/currencyCalculator",
       },
     }
