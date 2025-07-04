@@ -31,6 +31,7 @@ import javascriptInterCert from "../assets/HackerRank JavaScript(Intermediate) C
 import problemSolveCert from "../assets/HackerRank Problem Solving Certificate-1.png"
 import reactBasiccert from "../assets/HackerRank React (Basic) Certificate-1.png"
 import restAPIInterCert from "../assets/RestAPI Intermediate Certificate-1.png"
+import cs50Cert from "../assets/CS50x Certificate-1.png"
 
 // Sample certificate data
 const certificates = [
@@ -40,7 +41,7 @@ const certificates = [
     issuer: "Harvard University",
     date: "2025",
     category: "Python/SQL",
-    image: azureCertImg,
+    image: cs50Cert,
     certificateUrl: "https://cs50.harvard.edu/certificates/ba4c763e-e97f-4aa0-bfe0-e0f0bab8cdc9",
     skills: ["Flask", "Python", "SQL"],
     verified: true,
