@@ -42,7 +42,7 @@ const certificates = [
     date: "2025",
     category: "Python/SQL",
     image: cs50Cert,
-    certificateUrl: "https://cs50.harvard.edu/certificates/ba4c763e-e97f-4aa0-bfe0-e0f0bab8cdc9",
+    certificateUrl: "https://drive.google.com/file/d/1ivpafCwNC_ZKqJBXmQMs1G52pXLTYlAk/view?usp=drive_link",
     skills: ["Flask", "Python", "SQL"],
     verified: true,
     description:
