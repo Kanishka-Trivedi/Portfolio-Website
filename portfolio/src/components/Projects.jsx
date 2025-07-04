@@ -92,7 +92,7 @@
 //             </div>
 //             </Reveal>
 //         ))}
-        
+
 //     </div>
 //   )
 // }
@@ -119,135 +119,135 @@ import { AiOutlineGithub } from 'react-icons/ai';
 import Reveal from './Reveal';
 
 const projects = [
-    {
-      img: Project1,
-      name: "FINOPTIX",
-      title: "Project 1",
-      description: "Finoptix – A financial tracking app built with React, Vite, and MongoDB that helps users optimize savings, track expenses, and detect discrepancies with smart alerts and real-time insights.",
-      links: {
-        site: "https://finoptix.netlify.app",
-        github: "https://github.com/Kanishka-Trivedi/finoptix",
-      },
+  {
+    img: Project1,
+    name: "FINOPTIX",
+    title: "Project 1",
+    description: "Finoptix – A financial tracking app built with React, Vite, and MongoDB that helps users optimize savings, track expenses, and detect discrepancies with smart alerts and real-time insights.",
+    links: {
+      site: "https://finoptix.netlify.app",
+      github: "https://github.com/Kanishka-Trivedi/finoptix",
     },
-    {
-      img: Project2,
-      name: "NASA Clone",
-      title: "Project 2",
-      description: "NASA Clone – A responsive HTML & CSS website replicating NASA’s design with space imagery and mission details. ",
-      links: {
-        site: "https://nasaclone12.netlify.app",
-        github: "https://github.com/Kanishka-Trivedi/NASA-Clone",
-      },
+  },
+  {
+    img: Project2,
+    name: "NASA Clone",
+    title: "Project 2",
+    description: "NASA Clone – A responsive HTML & CSS website replicating NASA’s design with space imagery and mission details. ",
+    links: {
+      site: "https://nasaclone12.netlify.app",
+      github: "https://github.com/Kanishka-Trivedi/NASA-Clone",
     },
-    {
-      img: Project3,
-      name: "Canva Clone",
-      title: "Project 3",
-      description: "A responsive HTML & CSS design mimicking Canva’s UI with a sleek and modern layout.",
-      links: {
-        site: "https://canva-clone12.netlify.app",
-        github: "https://github.com/Kanishka-Trivedi/Canva-Clone",
-      },
+  },
+  {
+    img: Project3,
+    name: "Canva Clone",
+    title: "Project 3",
+    description: "A responsive HTML & CSS design mimicking Canva’s UI with a sleek and modern layout.",
+    links: {
+      site: "https://canva-clone12.netlify.app",
+      github: "https://github.com/Kanishka-Trivedi/Canva-Clone",
     },
-    {
-      img: Project4,
-      name: "Citadel Clone",
-      title: "Project 4",
-      description: "A responsive HTML & CSS replica of Citadel’s website, featuring a sleek and professional design.",
-      links: {
-        site: "https://citadelclone12.netlify.app",
-        github: "https://github.com/Kanishka-Trivedi/Citadel-Clone",
-      },
+  },
+  {
+    img: Project4,
+    name: "Citadel Clone",
+    title: "Project 4",
+    description: "A responsive HTML & CSS replica of Citadel’s website, featuring a sleek and professional design.",
+    links: {
+      site: "https://citadelclone12.netlify.app",
+      github: "https://github.com/Kanishka-Trivedi/Citadel-Clone",
     },
-    {
-      img: Project5,
-      name: "API Route Project",
-      title: "Project 5",
-      description: "A React Router project using MealsDB, CocktailDB, and more to browse meals, drinks, and recipes. ",
-      links: {
-        site: "/projects/project5",
-        github: "https://github.com/Kanishka-Trivedi/Route-Project",
-      },
+  },
+  {
+    img: Project5,
+    name: "API Route Project",
+    title: "Project 5",
+    description: "A React Router project using MealsDB, CocktailDB, and more to browse meals, drinks, and recipes. ",
+    links: {
+      site: "/projects/project5",
+      github: "https://github.com/Kanishka-Trivedi/Route-Project",
     },
-    {
-      img: Project6,
-      name: "Swiggy Clone",
-      title: "Project 6",
-      description: "A responsive HTML & CSS replica of Swiggy’s UI, featuring a clean design and food delivery layout.",
-      links: {
-        site: "/projects/project6",
-        github: "https://github.com/Kanishka-Trivedi/Html-Projects/blob/main/swiggy%20clone.html",
-      },
+  },
+  {
+    img: Project6,
+    name: "Swiggy Clone",
+    title: "Project 6",
+    description: "A responsive HTML & CSS replica of Swiggy’s UI, featuring a clean design and food delivery layout.",
+    links: {
+      site: "/projects/project6",
+      github: "https://github.com/Kanishka-Trivedi/Html-Projects/blob/main/swiggy%20clone.html",
     },
-    {
-      img: Project7,
-      name: "Plant Orbit",
-      title: "Project 7",
-      description: "A responsive HTML & CSS website for buying plants, featuring a clean and green design.",
-      links: {
-        site: "/projects/project7",
-        github: "https://github.com/Kanishka-Trivedi/Html-Projects/blob/main/plant%20website.html",
-      },
+  },
+  {
+    img: Project7,
+    name: "Plant Orbit",
+    title: "Project 7",
+    description: "A responsive HTML & CSS website for buying plants, featuring a clean and green design.",
+    links: {
+      site: "/projects/project7",
+      github: "https://github.com/Kanishka-Trivedi/Html-Projects/blob/main/plant%20website.html",
     },
-    {
-      img: Project8,
-      name: "Amazon Clone",
-      title: "Project 8",
-      description: "A responsive HTML & CSS replica of Amazon’s UI, featuring a product grid and e-commerce layout.",
-      links: {
-        site: "/projects/project8",
-        github: "https://github.com/Kanishka-Trivedi/Html-Projects/blob/main/amazon%20clone.html",
-      },
-    }, 
-       {
-      img: Project9,
-      name: "2048 Game",
-      title: "Project 9",
-      description: "A modern, responsive 2048 game clone built with React, Tailwind CSS, and Framer Motion, featuring smooth animations, sleek UI, and local score saving.",
-      links: {
-        site: "kgame2048.netlify.app",
-        github: "https://github.com/Kanishka-Trivedi/2048-Game",
-      },
+  },
+  {
+    img: Project8,
+    name: "Amazon Clone",
+    title: "Project 8",
+    description: "A responsive HTML & CSS replica of Amazon’s UI, featuring a product grid and e-commerce layout.",
+    links: {
+      site: "/projects/project8",
+      github: "https://github.com/Kanishka-Trivedi/Html-Projects/blob/main/amazon%20clone.html",
     },
-    {
-      img: Project10,
-      name: "Spotify Clone",
-      title: "Project 10",
-      description: "A React project replicating Spotify’s UI with dynamic music browsing, playlists, and a sleek audio player.",
-      links: {
-        site: "/projects/project10",
-        github: "https://github.com/Kanishka-Trivedi/Html-Projects/tree/main/Spotify%20Clone/vite_app",
-      },
+  },
+  {
+    img: Project9,
+    name: "2048 Game",
+    title: "Project 9",
+    description: "A modern, responsive 2048 game clone built with React, Tailwind CSS, and Framer Motion, featuring smooth animations, sleek UI, and local score saving.",
+    links: {
+      site: "https://kgame2048.netlify.app",
+      github: "https://github.com/Kanishka-Trivedi/2048-Game",
     },
-    {
-      img: Project11,
-      name: "Curency Calculator",
-      title: "Project 11",
-      description: "A React app using an API to provide real-time currency conversion with a simple and intuitive UI.",
-      links: {
-        site: "/projects/project11",
-        github: "https://github.com/Kanishka-Trivedi/React-Projects/tree/main/currencyCalculator",
-      },
-    }
+  },
+  {
+    img: Project10,
+    name: "Spotify Clone",
+    title: "Project 10",
+    description: "A React project replicating Spotify’s UI with dynamic music browsing, playlists, and a sleek audio player.",
+    links: {
+      site: "/projects/project10",
+      github: "https://github.com/Kanishka-Trivedi/Html-Projects/tree/main/Spotify%20Clone/vite_app",
+    },
+  },
+  {
+    img: Project11,
+    name: "Curency Calculator",
+    title: "Project 11",
+    description: "A React app using an API to provide real-time currency conversion with a simple and intuitive UI.",
+    links: {
+      site: "/projects/project11",
+      github: "https://github.com/Kanishka-Trivedi/React-Projects/tree/main/currencyCalculator",
+    },
+  }
 ];
 
 const Projects = () => {
   return (
-  <div className="max-w-[1000px] mx-auto p-6 md:my-20" id="portfolio">
+    <div className="max-w-[1000px] mx-auto p-6 md:my-20" id="portfolio">
 
-<h2 className="text-3xl font-bold text-gray-200 mb-8 mt-20">Project Demos</h2>
+      <h2 className="text-3xl font-bold text-gray-200 mb-8 mt-20">Project Demos</h2>
 
-<div className="flex justify-center">
-  <div className="relative w-full max-w-2xl" style={{ paddingTop: "56.25%" }}>
-    <iframe
-      className="absolute top-0 left-0 w-full h-full"
-      src="https://www.youtube.com/embed/LGklxaiPuXo"
-      title="Embedded Video"
-      frameBorder="0"
-      allowFullScreen
-    ></iframe>
-  </div>
-</div>
+      <div className="flex justify-center">
+        <div className="relative w-full max-w-2xl" style={{ paddingTop: "56.25%" }}>
+          <iframe
+            className="absolute top-0 left-0 w-full h-full"
+            src="https://www.youtube.com/embed/LGklxaiPuXo"
+            title="Embedded Video"
+            frameBorder="0"
+            allowFullScreen
+          ></iframe>
+        </div>
+      </div>
 
 
       <h2 className="text-3xl font-bold text-gray-200 mb-8 mt-15">Projects</h2>
