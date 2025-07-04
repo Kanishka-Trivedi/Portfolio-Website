@@ -36,6 +36,21 @@ import restAPIInterCert from "../assets/RestAPI Intermediate Certificate-1.png"
 const certificates = [
   {
     id: 1,
+    title: "Harvard University CS50x Certificate",
+    issuer: "Harvard University",
+    date: "2025",
+    category: "Python/SQL",
+    image: azureCertImg,
+    certificateUrl: "https://cs50.harvard.edu/certificates/ba4c763e-e97f-4aa0-bfe0-e0f0bab8cdc9",
+    skills: ["Flask", "Python", "SQL"],
+    verified: true,
+    description:
+      "Earned the CS50x certificate from Harvard University, demonstrating mastery in computer science fundamentals, algorithms, and real-world software development.",
+    credentialId: "ba4c763e-e97f-4aa0-bfe0-e0f0bab8cdc9",
+    color: "#8B5CF6",
+  },
+    {
+    id: 2,
     title: "Microsoft Azure AI Certificate",
     issuer: "Microsoft",
     date: "2025",
@@ -50,7 +65,7 @@ const certificates = [
     color: "#8B5CF6",
   },
   {
-    id: 2,
+    id: 3,
     title: "SheKunj AI Course Certificate",
     issuer: "SheKunj",
     date: "2025",
@@ -64,7 +79,7 @@ const certificates = [
     color: "#A855F7",
   },
   {
-    id: 3,
+    id: 4,
     title: "Amazon DocumentDB Certificate",
     issuer: "Simplilearn & Skillup",
     date: "2025",
@@ -77,7 +92,7 @@ const certificates = [
     color: "#7C3AED",
   },
   {
-    id: 4,
+    id: 5,
     title: "Azure Fundamentals Certificate",
     issuer: "Simplilearn & Skillup",
     date: "2025",
@@ -90,7 +105,7 @@ const certificates = [
     color: "#9333EA",
   },
   {
-    id: 5,
+    id: 6,
     title: "Azure WorkShop Certificate",
     issuer: "Microsoft",
     date: "2025",
@@ -103,7 +118,7 @@ const certificates = [
     color: "#7C3AED",
   },
   {
-    id: 6,
+    id: 7,
     title: "Basics of Azure Services Certificate",
     issuer: "Simplilearn & Skillup",
     date: "2025",
@@ -116,7 +131,7 @@ const certificates = [
     color: "#8B5CF6",
   },
   {
-    id: 7,
+    id: 8,
     title: "Deep Dive into Container Security Certificate",
     issuer: "Simplilearn & Skillup",
     date: "2025",
@@ -129,7 +144,7 @@ const certificates = [
     color: "#8B5CF6",
   },
   {
-    id: 8,
+    id: 9,
     title: "Gateway Load Balancer Certificate",
     issuer: "Simplilearn & Skillup",
     date: "2025",
@@ -142,7 +157,7 @@ const certificates = [
     color: "#8B5CF6",
   },
   {
-    id: 9,
+    id: 10,
     title: "GitHub Copilot Certificate",
     issuer: "Simplilearn & Skillup",
     date: "2025",
@@ -155,7 +170,7 @@ const certificates = [
     color: "#8B5CF6",
   },
   {
-    id: 10,
+    id: 11,
     title: "RestAPI Intermediate Certificate",
     issuer: "HackerRank",
     date: "2025",
@@ -169,7 +184,7 @@ const certificates = [
     color: "#8B5CF6",
   },
   {
-    id: 11,
+    id: 12,
     title: "FrontEnd Devloper Certificate",
     issuer: "HackerRank",
     date: "2025",
@@ -183,7 +198,7 @@ const certificates = [
     color: "#8B5CF6",
   },
   {
-    id: 12,
+    id: 13,
     title: "Css Certificate",
     issuer: "HackerRank",
     date: "2025",
@@ -197,7 +212,7 @@ const certificates = [
     color: "#8B5CF6",
   },
   {
-    id: 13,
+    id: 14,
     title: "JavaScript Basics Certificate",
     issuer: "HackerRank",
     date: "2025",
@@ -211,7 +226,7 @@ const certificates = [
     color: "#8B5CF6",
   },
   {
-    id: 14,
+    id: 15,
     title: "JavaScript Intermediate Certificate",
     issuer: "HackerRank",
     date: "2025",
@@ -225,7 +240,7 @@ const certificates = [
     color: "#8B5CF6",
   },
   {
-    id: 15,
+    id: 16,
     title: "React Certificate",
     issuer: "HackerRank",
     date: "2025",
@@ -239,7 +254,7 @@ const certificates = [
     color: "#8B5CF6",
   },
   {
-    id: 16,
+    id: 17,
     title: "Problem Solving Certificate",
     issuer: "HackerRank",
     date: "2025",
