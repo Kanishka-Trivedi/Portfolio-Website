@@ -372,12 +372,10 @@ import {
   AiOutlineLinkedin,
 } from "react-icons/ai";
 import {
-  DiCss3,
-  DiHtml5,
-  DiJavascript1,
   DiNodejsSmall,
   DiReact,
 } from "react-icons/di";
+import { SiMongodb, SiExpress } from "react-icons/si";
 import { motion } from "framer-motion";
 
 const Hero = () => {
@@ -505,7 +503,7 @@ const Hero = () => {
       </div>
 
       {/* 🔵 Tech Stack */}
-      <motion.div
+      {/* <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
@@ -514,71 +512,105 @@ const Hero = () => {
       >
         <p className="w-full text-gray-300 mb-4">My Tech Stack</p>
         <div className="flex justify-center gap-4">
-          <DiHtml5 className="text-orange-600" />
-          <DiCss3 className="text-blue-600" />
+  <SiMongodb className="text-green-500 text-6xl drop-shadow-xl" />
+  <SiExpress className="text-gray-400 text-6xl drop-shadow-xl" />
           <DiJavascript1 className="text-yellow-500" />
           <DiReact className="text-blue-500" />
           <DiNodejsSmall className="text-green-500" />
         </div>
+      </motion.div> */}
+
+
+      {/* 🔵 Tech Stack (MERN) */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 1, delay: 0.5 }}
+        className="py-16"
+      >
+        <h2 className="text-center text-3xl sm:text-4xl md:text-5xl text-purple-400 font-semibold mb-10">
+          My Tech Stack (MERN)
+        </h2>
+
+        <div className="flex flex-wrap justify-center gap-10">
+
+          {/* MongoDB */}
+          <SiMongodb className="text-green-500 text-7xl drop-shadow-[0_0_15px_#22c55e]" />
+
+          {/* Express */}
+          <SiExpress className="text-gray-300 text-7xl drop-shadow-[0_0_15px_#ffffff50]" />
+
+          {/* React */}
+          <DiReact className="text-blue-400 text-7xl animate-spin drop-shadow-[0_0_15px_#60a5fa]" />
+
+          {/* Node.js */}
+          <DiNodejsSmall className="text-green-400 text-7xl drop-shadow-[0_0_15px_#4ade80]" />
+        </div>
       </motion.div>
 
-      {/* 🟢 About Me Section */}
-      <motion.div className="text-gray-300 mb-12 text-center">
+
+      {/* 🟢 About Me — LEFT aligned */}
+      <motion.div className="text-gray-300 mb-24 text-left md:ml-12 ml-2">
         <h2 className="text-3xl sm:text-4xl md:text-5xl text-purple-400 font-semibold mb-6">
           About Me
         </h2>
-        <p className="text-lg sm:text-xl md:text-2xl max-w-3xl mx-auto">
-          Hey there! I’m <span className="text-purple-400 font-semibold">Kanishka Trivedi</span>, an aspiring software engineer from <span className="text-purple-400 font-semibold">Palanpur, Gujarat</span>.
-          I’m passionate about building smooth, intuitive digital experiences and love solving complex problems with full-stack development.
-          Whether it’s crafting seamless UIs or optimizing backend performance, I’m always up for a challenge! 🚀
-        </p>
 
-      </motion.div>
-
-      {/* 🟠 Education Section */}
-      <motion.div className="text-gray-300 mb-12 text-center">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl text-purple-400 font-semibold mb-6">
-          Education
-        </h2>
-        <p className="text-lg sm:text-xl md:text-2xl max-w-3xl mx-auto">
-          📖 Currently pursuing a Bachelor's Degree in Computer Science
-          🎯 Focused on Web Development, and Software Engineering.
+        <p className="text-lg sm:text-xl md:text-2xl max-w-3xl leading-relaxed">
+          I’m <span className="text-purple-400 font-semibold">Kanishka Trivedi</span>,
+          a full-stack developer based in
+          <span className="text-purple-400 font-semibold"> Ahmedabad, Gujarat</span>.
+          I focus on creating fast, scalable, and user-centric digital experiences.
+          My work spans modern frontend engineering, backend architecture, and
+          end-to-end product development. I’m continuously refining my skills in
+          system design, performance optimization, and building smarter solutions.
         </p>
       </motion.div>
 
-      {/* 🔴 Finoptix Project */}
-      <motion.div className="text-gray-300 mb-12 text-center">
+
+
+
+      {/* 🔴 Finoptix — RIGHT aligned */}
+      <motion.div className="text-gray-300 mb-24 text-right md:mr-12 mr-2">
         <h2 className="text-3xl sm:text-4xl md:text-5xl text-purple-400 font-semibold mb-6">
           My Major Project: Finoptix
         </h2>
-        <p className="text-lg sm:text-xl md:text-2xl max-w-3xl mx-auto">
-          🚀 Finoptix is a financial tracking app that helps users manage
-          expenses, optimize spending, and achieve financial freedom.
-          💡 Features: smart insights, AI-powered analytics, and intuitive UI
-          to make personal finance effortless.
-          🌐 Built using React, MongoDB, and framer motion for dynamic
-          insights.
+
+        <p className="text-lg sm:text-xl md:text-2xl max-w-3xl ml-auto leading-relaxed">
+          Finoptix is a personal finance management platform built to help users
+          understand and optimize their spending habits. It delivers clean visual
+          insights, intuitive UI, and smart financial tracking tools. Developed using
+          React, MongoDB, and Framer Motion, the platform offers smooth interactions
+          and dynamic data representation for a rich user experience.
         </p>
       </motion.div>
 
-      <motion.div className="text-gray-300 mb-12 text-center">
+
+
+
+      {/* 🟣 Hobbies & Interests — LEFT aligned again */}
+      <motion.div className="text-gray-300 mb-24 text-left md:ml-12 ml-2">
         <h2 className="text-3xl sm:text-4xl md:text-5xl text-purple-400 font-semibold mb-6">
           Hobbies & Interests
         </h2>
+
         <motion.p
-          className="text-lg sm:text-xl md:text-2xl max-w-3xl mx-auto 
-               text-gray-300 bg-gradient-to-r from-purple-400 to-indigo-400 
-               inline-block bg-clip-text"
+          className="text-lg sm:text-xl md:text-2xl max-w-3xl 
+               bg-gradient-to-r from-purple-400 to-indigo-400 
+               inline-block bg-clip-text leading-relaxed"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 1, delay: 0.2 }}
         >
-          When I’m not coding, you’ll find me exploring new tech,
-          diving into finance & investments, or automating random tasks just for fun.
-          I also enjoy gaming 🎮, sci-fi movies 🎬, Traveling 🌍, Sketching 🎨, and Listening to Music 🎵.
+          Outside of development, I spend time exploring emerging tech,
+          studying financial systems, and experimenting with automation.
+          I also enjoy gaming, cinematic storytelling, travel, sketching,
+          and music — all of which help me stay creative and inspired.
         </motion.p>
       </motion.div>
+
+
 
 
       <motion.div className="text-gray-300 mb-12 text-center">
