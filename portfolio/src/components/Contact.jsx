@@ -103,15 +103,13 @@ const Contact = () => {
             </h3>
 
             <p className="text-justify leading-7 w-full">
-              Hey there! I'm a passionate <span className="text-purple-300 font-medium">Full-Stack Developer</span> who thrives on turning ideas into reality.
-              With expertise in both frontend and backend technologies, I love creating smooth, user-friendly, and performant applications.
+              I’m a dedicated <span className="text-purple-300 font-medium">Full-Stack Developer</span> with a strong focus on building efficient, scalable, and intuitive digital products. I enjoy turning complex ideas into clean, functional solutions while maintaining a seamless user experience across the stack.
             </p>
 
             <p className="text-justify leading-7 w-full mt-4">
-              My journey in tech has been fueled by curiosity and a constant drive to learn. From crafting sleek UI/UX experiences
-              to designing robust server-side logic, I enjoy solving real-world problems through code.
-              When I'm not coding, you’ll find me exploring new tech trends, contributing to open-source, or brainstorming the next big project. 🚀
+              My journey in software development is driven by curiosity, continuous learning, and a commitment to writing thoughtful, maintainable code. I work across modern frontend ecosystems and backend architectures to create systems that are both reliable and user-centric. Beyond development, I actively explore emerging technologies, refine my problem-solving approach, and work on projects that push me to grow as an engineer.
             </p>
+
 
             <p className="mt-4 text-lg font-medium text-purple-300">
               Let's collaborate and build something awesome together! 🤝✨
@@ -120,7 +118,7 @@ const Contact = () => {
             {/* 🟣 Stats Section */}
             <div className="flex flex-wrap mt-8 gap-5 justify-center md:justify-start">
               <div className="bg-gray-800/40 p-5 rounded-lg w-80 flex flex-col items-center">
-                <h3 className="text-3xl font-semibold text-white">8+</h3>
+                <h3 className="text-3xl font-semibold text-white">10+</h3>
                 <p className="text-xs text-white">Projects Completed</p>
               </div>
             </div>
@@ -192,55 +190,73 @@ const Contact = () => {
           <form
             action="https://getform.io/f/bejrrvna"
             method="POST"
-            className="bg-gray-900 p-6 md:p-8 rounded-lg shadow-lg w-full"
+            className="bg-gray-900 p-8 md:p-10 rounded-lg shadow-lg w-full 
+             flex flex-col gap-6 border border-purple-800/40"
           >
-            <h3 className="text-gray-100 font-bold text-2xl mb-4">Let’s Connect! 🚀</h3>
+            {/* Title */}
+            <div>
+              <h3 className="text-gray-100 font-bold text-3xl">Let’s Connect! 🚀</h3>
+              <p className="text-gray-400 text-sm mt-1">
+                Have an idea, opportunity, or project in mind? I usually respond within 24 hours.
+              </p>
+            </div>
 
-            <input
-              type="text"
-              name="name"
-              placeholder="Your Name"
-              className="mb-3 w-full p-3 rounded-md border border-purple-600 bg-gray-800 text-white placeholder-gray-500"
-              required
-            />
+            {/* Divider */}
+            <div className="w-full h-[1px] bg-purple-700/40"></div>
 
-            <input
-              type="email"
-              name="email"
-              placeholder="Your Email"
-              className="mb-3 w-full p-3 rounded-md border border-purple-600 bg-gray-800 text-white placeholder-gray-500"
-              required
-            />
+            {/* Inputs */}
+            <div className="flex flex-col gap-4">
+              <div className="flex flex-col">
+                <label className="text-gray-300 mb-1 text-sm">Your Name</label>
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="John Doe"
+                  className="p-3 rounded-md border border-purple-600 bg-gray-800 
+                   text-white placeholder-gray-500 text-base"
+                  required
+                />
+              </div>
 
-            <textarea
-              name="message"
-              rows="4"
-              placeholder="Your Message..."
-              className="mb-3 w-full p-3 rounded-md border border-purple-600 bg-gray-800 text-white placeholder-gray-500"
-              required
-            ></textarea>
+              <div className="flex flex-col">
+                <label className="text-gray-300 mb-1 text-sm">Your Email</label>
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="example@mail.com"
+                  className="p-3 rounded-md border border-purple-600 bg-gray-800 
+                   text-white placeholder-gray-500 text-base"
+                  required
+                />
+              </div>
 
-            {/* Hidden field for spam prevention */}
-            <input
-              type="hidden"
-              name="_gotcha"
-              className="hidden" // Replaced inline style with a class
-            />
+              <div className="flex flex-col">
+                <label className="text-gray-300 mb-1 text-sm">Message</label>
+                <textarea
+                  name="message"
+                  rows="5"
+                  placeholder="Tell me a bit about your project or query..."
+                  className="p-3 rounded-md border border-purple-600 bg-gray-800 
+                   text-white placeholder-gray-500 text-base"
+                  required
+                ></textarea>
+              </div>
+            </div>
 
-            {/* Add your email as a hidden field */}
-            <input
-              type="hidden"
-              name="_to"
-              value="kanishka.trivedi.cg@gmail.com"
-            />
+            {/* Hidden fields */}
+            <input type="hidden" name="_gotcha" />
+            <input type="hidden" name="_to" value="kanishka.trivedi.cg@gmail.com" />
 
+            {/* Final Button */}
             <button
               type="submit"
-              className="w-full py-3 rounded-md text-white font-semibold text-xl bg-purple-600 hover:bg-purple-700 transition"
+              className="w-full mt-2 py-3 rounded-md text-white font-semibold text-xl 
+               bg-purple-600 hover:bg-purple-700 transition"
             >
               Send Message
             </button>
           </form>
+
         </div>
       </Reveal>
     </div>

@@ -115,14 +115,25 @@ import Project8 from "../assets/Project8.png";
 import Project9 from "../assets/Project9.png";
 import Project10 from "../assets/Project10.png";
 import Project11 from "../assets/Project11.png";
+import Project12 from "../assets/Project12.png";
 import { AiOutlineGithub } from 'react-icons/ai';
 import Reveal from './Reveal';
 
 const projects = [
   {
     img: Project1,
+    name: "Willow & Wind",
+    title: "Project 2",
+    description: "Willow & Wind – A modern plant and gardening e-commerce website built with a clean UI and smooth UX, allowing users to browse, search, and purchase a variety of plants, pots, and gardening essentials.",
+    links: {
+      site: "https://willowandvine.netlify.app",
+      github: "https://github.com/Kanishka-Trivedi/Willow-Vine",
+    },
+  },
+  {
+    img: Project2,
     name: "FINOPTIX",
-    title: "Project 1",
+    title: "Project 2",
     description: "Finoptix – A financial tracking app built with React, Vite, and MongoDB that helps users optimize savings, track expenses, and detect discrepancies with smart alerts and real-time insights.",
     links: {
       site: "https://finoptix.netlify.app",
@@ -130,9 +141,9 @@ const projects = [
     },
   },
   {
-    img: Project2,
+    img: Project3,
     name: "NASA Clone",
-    title: "Project 2",
+    title: "Project 3",
     description: "NASA Clone – A responsive HTML & CSS website replicating NASA’s design with space imagery and mission details. ",
     links: {
       site: "https://nasaclone12.netlify.app",
@@ -140,9 +151,9 @@ const projects = [
     },
   },
   {
-    img: Project3,
+    img: Project4,
     name: "Canva Clone",
-    title: "Project 3",
+    title: "Project 4",
     description: "A responsive HTML & CSS design mimicking Canva’s UI with a sleek and modern layout.",
     links: {
       site: "https://canva-clone12.netlify.app",
@@ -150,9 +161,9 @@ const projects = [
     },
   },
   {
-    img: Project4,
+    img: Project5,
     name: "Citadel Clone",
-    title: "Project 4",
+    title: "Project 5",
     description: "A responsive HTML & CSS replica of Citadel’s website, featuring a sleek and professional design.",
     links: {
       site: "https://citadelclone12.netlify.app",
@@ -160,19 +171,19 @@ const projects = [
     },
   },
   {
-    img: Project5,
+    img: Project6,
     name: "API Route Project",
-    title: "Project 5",
+    title: "Project 6",
     description: "A React Router project using MealsDB, CocktailDB, and more to browse meals, drinks, and recipes. ",
     links: {
-      site: "/projects/project5",
+      site: "db-explorer.netlify.app",
       github: "https://github.com/Kanishka-Trivedi/Route-Project",
     },
   },
   {
-    img: Project6,
+    img: Project7,
     name: "Swiggy Clone",
-    title: "Project 6",
+    title: "Project 7",
     description: "A responsive HTML & CSS replica of Swiggy’s UI, featuring a clean design and food delivery layout.",
     links: {
       site: "/projects/project6",
@@ -180,9 +191,9 @@ const projects = [
     },
   },
   {
-    img: Project7,
+    img: Project8,
     name: "Plant Orbit",
-    title: "Project 7",
+    title: "Project 8",
     description: "A responsive HTML & CSS website for buying plants, featuring a clean and green design.",
     links: {
       site: "/projects/project7",
@@ -190,9 +201,9 @@ const projects = [
     },
   },
   {
-    img: Project8,
+    img: Project9,
     name: "Amazon Clone",
-    title: "Project 8",
+    title: "Project 9",
     description: "A responsive HTML & CSS replica of Amazon’s UI, featuring a product grid and e-commerce layout.",
     links: {
       site: "/projects/project8",
@@ -200,9 +211,9 @@ const projects = [
     },
   },
   {
-    img: Project9,
+    img: Project10,
     name: "2048 Game",
-    title: "Project 9",
+    title: "Project 10",
     description: "A modern, responsive 2048 game clone built with React, Tailwind CSS, and Framer Motion, featuring smooth animations, sleek UI, and local score saving.",
     links: {
       site: "https://kgame2048.netlify.app",
@@ -210,9 +221,9 @@ const projects = [
     },
   },
   {
-    img: Project10,
+    img: Project11,
     name: "Spotify Clone",
-    title: "Project 10",
+    title: "Project 11",
     description: "A React project replicating Spotify’s UI with dynamic music browsing, playlists, and a sleek audio player.",
     links: {
       site: "/projects/project10",
@@ -220,9 +231,9 @@ const projects = [
     },
   },
   {
-    img: Project11,
+    img: Project12,
     name: "Curency Calculator",
-    title: "Project 11",
+    title: "Project 12",
     description: "A React app using an API to provide real-time currency conversion with a simple and intuitive UI.",
     links: {
       site: "/projects/project11",
